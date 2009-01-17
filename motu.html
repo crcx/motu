@@ -41,6 +41,19 @@
   <script src="scripts/cookies.js"></script>
   <script src="scripts/persist.js"></script>
   <script>
+  function toggle(obj)
+  {
+    var el = document.getElementById(obj);
+    if ( el.style.display != 'none' )
+    {
+      el.style.display = 'none';
+    }
+    else
+    {
+      el.style.display = 'block';
+    }
+  }
+
   function selection(txtarea)
   {
     var sl = (txtarea.value).substring(txtarea.selectionStart, txtarea.selectionEnd);
@@ -74,10 +87,13 @@
     <div style="visibility: hidden"><textarea name="code" cols="1" rows="1"></textarea></div>
   </td>
   <td style="align: left" valign="top">
-    <input type="button" name="evalHighlighted" value="Evaluate" onClick="javascript:runCode()"/><br>
-    <input type="button" name="saveTIB" value="Save" onClick="javascript:save()"/><br>
-    <input type="button" name="loadTIB" value="Load" onClick="javascript:load()"/><br>
-    <input type="button" name="newTIB" value="New" onClick="javascript:allnew()"/><br>
+    <input type="button" name="bEvaluate" value="Evaluate" onClick="javascript:runCode()"/><br>
+    <hr>
+    <input type="button" name="bSave" value="Save" onClick="javascript:save()"/><br>
+    <input type="button" name="bLoad" value="Load" onClick="javascript:load()"/><br>
+    <input type="button" name="bNew" value="New" onClick="javascript:allnew()"/><br>
+    <hr>
+    <input type="button" name="bClearDisplay" value="Clear Output" onClick="javascript:clearDisplay()"/><br>
   </td>
 </tr>
 </table>
