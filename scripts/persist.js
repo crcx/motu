@@ -1,11 +1,11 @@
 function save()
 {
-  createCookie('retrotib', document.forms[0].tib.value);
+  createCookie('motu', document.forms[0].tib.value);
 }
 
 function load()
 {
-  var x = readCookie('retrotib')
+  var x = readCookie('motu')
   if (x)
     document.forms[0].tib.value = x;
   else
