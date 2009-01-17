@@ -1,0 +1,15 @@
+Motu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This is a personal programming environment I've begun to use when
+testing things in Retro.
+
+Some Features:
+
+  1) You can save your code + data into a cookie
+  2) You can intermix code and data, and evaluate specific pieces
+     of code
+  3) It's 100% client side and can be used offline
+
+Motu was written by Charles Childers and is gifted to the public
+domain.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
