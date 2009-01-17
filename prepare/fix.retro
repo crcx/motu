@@ -1,0 +1,4 @@
+here ] ; is boot
+here ] dup 13 =if drop 32 ;; then dup 10 =if drop 32 ;; then ; is (remap-keys)
+here ] ; is ok
+save bye
