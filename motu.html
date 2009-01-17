@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Motu</title>
+  <script src="scripts/ngaro.js"></script>
+  <script src="scripts/retroImage.js"></script>
+  <script src="scripts/cookies.js"></script>
+  <script src="scripts/persist.js"></script>
+  <script>
+  function selection(txtarea)
+  {
+    var sl = (txtarea.value).substring(txtarea.selectionStart, txtarea.selectionEnd);
+    return sl;
+  }
+
+  function runCode()
+  {
+    var txt = selection(document.forms[0].tib);
+    document.forms[0].code.value =  txt;
+    runImage();
+  }
+
+  function bootstrap()
+  {
+    initVM();
+    loadImage();
+    startVM();
+    load();
+  }
+</script>
+
+</head>
+<body onLoad="bootstrap()">
+<form name="aform">
+<table border="0">
+<tr>
+  <td width="10%">
+    <textarea name="tib" cols="70" name="code" rows="20"></textarea>
+    <textarea name="output" cols="70" name="code" rows="10"></textarea>
+    <div style="visibility: hidden"><textarea name="code" cols="1" rows="1"></textarea></div>
+  </td>
+  <td style="align: left" valign="top">
+    <input type="button" name="evalHighlighted" value="Evaluate Highlighted" onClick="javascript:runCode()"/><br>
+    <input type="button" name="saveTIB" value="Save Session" onClick="javascript:save()"/><br>
+    <input type="button" name="loadTIB" value="Load Session" onClick="javascript:load()"/><br>
+    <input type="button" name="newTIB" value="New Session" onClick="javascript:allnew()"/><br>
+  </td>
+</tr>
+</table>
+</form>
+</body>
+</html>
