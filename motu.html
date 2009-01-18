@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>Motu</title>
+
   <link rel="stylesheet" type="text/css" href="motu.css" />
   <script src="scripts/ngaro.js"></script>
   <script src="scripts/retroImage.js"></script>
@@ -31,6 +32,7 @@
     var txt = selection(document.forms[0].tib);
     document.forms[0].code.value =  txt;
     runImage();
+    document.forms[0].output.value += '\n';
   }
 
   function bootstrap()
@@ -41,7 +43,6 @@
     load();
   }
 </script>
-
 </head>
 <body onLoad="bootstrap()">
 <form name="ui">
