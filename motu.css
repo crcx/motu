@@ -1,15 +1,16 @@
 body
 {
+  background-color: #252525;
   color: #000080;
-  background-color: silver;
 }
 
+/*
+#DEB887;
+*/
 textarea, input
 {
-  color: #000080;
-  background-color: #DEB887;
-  border: 1px solid black;
-  font-family: "Monaco", monospace;
+  border: 1px solid darkgrey;
+  font-family: monospace;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -21,18 +22,20 @@ textarea, input
   text-transform: none;
   text-align: left;
   text-indent: 0ex;
-  border-style: single;
+  background-color: #2A2A2A;
+  color: silver;
+  padding: 3px;
 }
 
 input:hover
 {
-  background: green;
-  color: white;
+  background-color: #DEB887;
+  color: black;
 }
 
 input:active
 {
-  background: darkblue;
+  background-color: #96753B;
   color: white;
 }
 
@@ -47,4 +50,3 @@ input
 {
   width: 10em;
 }
-
