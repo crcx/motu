@@ -7,7 +7,7 @@ function createCookie(name,value)
   var domain = (argc > 4) ? argv[4] : null;
   var secure = (argc > 5) ? argv[5] : false;
   document.cookie = name + "=" + escape(value) +
-  ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+  ((expires == null) ? "" : ("; expires=" + expires)) +
   ((path == null) ? "" : ("; path=" + path)) +
   ((domain == null) ? "" : ("; domain=" + domain)) +
   ((secure == true) ? "; secure" : "");
