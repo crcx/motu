@@ -1,0 +1,42 @@
+body
+{
+  color: #000080;
+  background-color: silver;
+}
+
+textarea, input
+{
+  color: #000080;
+  background-color: #DEB887;
+  border: 1px solid black;
+  font-family: "Monaco", monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: normal;
+  line-height: 100%;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: none;
+  text-align: left;
+  text-indent: 0ex;
+}
+
+input:hover
+{
+  background: green;
+  color: white;
+}
+
+hr
+{
+  height: 1px;
+  background-color: #000000;
+  border: 0px;
+}
+
+input
+{
+  width: 10 em;
+}
