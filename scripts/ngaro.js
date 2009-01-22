@@ -349,3 +349,31 @@ function processImage()
     }
   }
 }
+
+
+
+
+
+
+  function selection(txtarea)
+  {
+    var sl = (txtarea.value).substring(txtarea.selectionStart, txtarea.selectionEnd);
+    return sl;
+  }
+
+  function runCode()
+  {
+    var txt = selection(document.forms[0].tib);
+    document.forms[0].code.value =  txt;
+    runImage();
+    document.forms[0].output.value += '\n';
+  }
+
+  function bootstrap()
+  {
+    initVM();
+    loadImage();
+    startVM();
+    load();
+  }
+

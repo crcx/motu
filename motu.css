@@ -12,12 +12,13 @@
 {
   position:absolute;
   z-index:1;
+  width: 80%;
 }
 
 body
 {
   background-color: #252525;
-  color: #000080;
+  color: grey;
 }
 
 /*
