@@ -48,6 +48,8 @@
   var interval;
   var devOutput = "";
 
+  var tib = '  ';
+
   var startLast = 0;
   var startHeap = 0;
   var startStr  = 0;
@@ -83,8 +85,8 @@ function handleDevices()
   if (ports[0] == 0 && ports[1] == 1)
   {
     ports[0] = 1;
-    ports[1] = document.forms[0].code.value.charCodeAt(0);
-    document.forms[0].code.value = document.forms[0].code.value.substring(1, document.forms[0].code.value.length);
+    ports[1] = tib.charCodeAt(0);
+    tib = tib.substring(1, tib.length);
   }
 
   /* Output */
@@ -306,7 +308,7 @@ function processOpcode()
 function runImage()
 {
   run = 1;
-  document.forms[0].code.value += '  ';
+  tib += '  ';
 }
 
 
@@ -317,9 +319,9 @@ function runImage()
 function startVM()
 {
   run = 1;
-  document.forms[0].code.value += '  ';
   interval = setInterval("processImage()", 10);
 }
+
 
 
 /**********************************************************************
@@ -336,7 +338,7 @@ function startVM()
 function processImage()
 {
   var a;
-  if (document.forms[0].code.value.length <= 0 || run == 0)
+  if (tib.length <= 0 || run == 0)
   {
     run = 0;
     return;
@@ -356,37 +358,51 @@ function processImage()
 
 
 
+/**********************************************************************
+ * selection(txtarea)
+ * Returns the highlighted text from a textarea
+ **********************************************************************/
+function selection(txtarea)
+{
+  var sl = (txtarea.value).substring(txtarea.selectionStart, txtarea.selectionEnd);
+  return sl;
+}
 
 
 
-  function selection(txtarea)
-  {
-    var sl = (txtarea.value).substring(txtarea.selectionStart, txtarea.selectionEnd);
-    return sl;
-  }
+/**********************************************************************
+ * runCode()
+ * Set tib to the highlighted text and run the Retro interpreter
+ **********************************************************************/
+function runCode()
+{
+  tib = selection(document.forms[0].tib);
+  runImage();
+  document.forms[0].output.value += '\n';
+}
 
-  function runCode()
-  {
-    var txt = selection(document.forms[0].tib);
-    document.forms[0].code.value =  txt;
-    runImage();
-    document.forms[0].output.value += '\n';
-  }
 
-  function bootstrap()
-  {
-    initVM();
-    loadImage();
-    startVM();
-    load();
 
-    startLast = image[2];
-    startHeap = image[3];
-    startStr  = image[4];
-  }
+/**********************************************************************
+ * bootstrap()
+ * Setup everything and initialize the image
+ **********************************************************************/
+function bootstrap()
+{
+  initVM();
+  loadImage();
+  startVM();
+  load();
+
+  /* Save some system state (for 'reset vm' functionality) */
+  startLast = image[2];
+  startHeap = image[3];
+  startStr  = image[4];
+}
 
   function resetVM()
   {
+    tib = '  ';
     image[2] = startLast;
     image[3] = startHeap;
     image[4] = startStr;
