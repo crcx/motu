@@ -400,11 +400,26 @@ function bootstrap()
   startStr  = image[4];
 }
 
-  function resetVM()
-  {
-    tib = '  ';
-    image[2] = startLast;
-    image[3] = startHeap;
-    image[4] = startStr;
-    initVM();
-  }
+
+/**********************************************************************
+ * resetRetro()
+ * Reset the heap, stack, dictionary to a default settings and reboot
+ * the Retro image
+ **********************************************************************/
+function resetRetro()
+{
+  tib = '  ';
+  image[2] = startLast;
+  image[3] = startHeap;
+  image[4] = startStr;
+  initVM();
+}
+
+
+
+function getMemUsage()
+{
+  document.forms[1].stats.value = 'Heap: ' + image[3] + '\n';
+  document.forms[1].stats.value += 'Dictionary: ' + image[2] + '\n';
+  document.forms[1].stats.value += 'String Table: ' + image[4];
+}

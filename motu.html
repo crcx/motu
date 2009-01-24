@@ -48,13 +48,20 @@
     </div>
     <div class="tabbertab">
       <h2>Advanced</h2>
-      <table border="0" width="80%">
-      <tr><td>
-        <form>
-          <input type="button" name="bResetVM" value="Reset VM" onClick="javascript:resetVM()"/>
-        </form>
-      </td></tr>
-      </table>
+      <form name="ui">
+        <table border="0" width="80%">
+        <tr>
+          <td width="10%">
+            <textarea name="stats" cols="70" name="code" rows="20"></textarea>
+          </td>
+          <td style="align: left" valign="top">
+          <input type="button" name="bUpdateStats" value="Get Image Stats" onClick="javascript:getMemUsage()"/>
+          <hr>
+          <input type="button" name="bResetRetro" value="Reset Retro" onClick="javascript:resetRetro()"/>
+          </td>
+        </tr>
+        </table>
+      </form>
     </div>
   </div>
 
