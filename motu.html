@@ -8,6 +8,7 @@
   <script src="scripts/retroImage.js"></script>
   <script src="scripts/cookies.js"></script>
   <script src="scripts/persist.js"></script>
+  <script src="scripts/notepad.js"></script>
   <script type="text/javascript">
     var tabberOptions = {
       'manualStartup':true,
@@ -30,7 +31,7 @@
         <table border="0" width="80%">
         <tr>
           <td width="10%">
-            <textarea name="tib" cols="70" name="code" rows="20"></textarea>
+            <textarea name="tib" cols="70" name="code" rows="20"></textarea><br>
             <textarea name="output" cols="70" name="code" rows="10"></textarea>
           </td>
           <td style="align: left" valign="top">
@@ -41,6 +42,9 @@
             <input type="button" name="bNew"  value="New"  onClick="javascript:allnew()"/><br>
             <hr>
             <input type="button" name="bClearDisplay" value="Clear Output" onClick="javascript:clearDisplay()"/><br>
+            <hr>
+            <input type="button" name="bLine" value="Separator" onClick="uiLine()"/><br>
+            <input type="button" name="bDate" value="Date" onClick="uiToday()"/>
           </td>
         </tr>
         </table>
