@@ -1,0 +1,29 @@
+Setting up Motu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+There are two ways of using Motu:
+
+  1) 100% Client Side
+
+     In this configuration (the default), you load motu.html into
+     your browser and are ready to go. Your notes are saved into a
+     cookie file, giving you roughly 3800 bytes to play with.
+
+  2) Client/Server
+
+     This is a slightly more involved system to setup, but should be
+     pretty easy on a Linux, BSD, or OS X system.
+
+     A) Replace persist.js with the copy in the 'ajax' directory
+     B) Copy the other files from 'ajax' into the top-level Motu
+        directory
+     C) Run 'perl tuari.pl'
+     D) Point your browser to http://localhost:9812
+
+     The advantage to this is that you get to store your files via
+     a CGI script ('save.cgi'). Advanced users can set this up on a
+     real web server and have access to their notes/code from any
+     computer.
+
+     This approach has no preset limits on the length of the notes
+     file.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
