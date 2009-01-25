@@ -9,7 +9,10 @@ Some Features:
   2) You can intermix code and data, and evaluate specific pieces
      of code
   3) It's 100% client side and can be used offline
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Motu was written by Charles Childers and is gifted to the public
 domain.
+
+Some of the javascript and/or css files used are copyrighted. See
+individual files for copyright/license information.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
