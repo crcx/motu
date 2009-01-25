@@ -5,10 +5,11 @@ testing things in Retro.
 
 Some Features:
 
-  1) You can save your code + data into a cookie
+  1) You can save your code + data into a cookie or to a remote
+     server
   2) You can intermix code and data, and evaluate specific pieces
      of code
-  3) It's 100% client side and can be used offline
+  3) It can run 100% client side and be used without a server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Motu was written by Charles Childers and is gifted to the public
 domain.
