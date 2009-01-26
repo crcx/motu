@@ -341,8 +341,11 @@ function processImage()
   if (tib.length <= 0 || run == 0)
   {
     run = 0;
+    document.getElementById('wait').style.display = "none";
     return;
   }
+
+  document.getElementById('wait').style.display = "block";
 
   for (a = CYCLES_PER; a > 0; a--)
   {

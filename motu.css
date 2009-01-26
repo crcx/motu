@@ -8,6 +8,12 @@
   z-index: 0;
 }
 
+#wait
+{
+  display: block;
+  visibility: visible;
+}
+
 #content
 {
   position:absolute;
