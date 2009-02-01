@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Motu</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="motu.css" />
+  <link rel="stylesheet" type="text/css" href="tabber.css" />
+  <script src="scripts/ngaro.js"></script>
+  <script src="scripts/retroImage.js"></script>
+  <script src="scripts/cookies.js"></script>
+  <script src="scripts/persist.js"></script>
+  <script src="scripts/notepad.js"></script>
+  <script type="text/javascript">
+    var tabberOptions = {
+      'manualStartup':true,
+      'onLoad': function(argsObj) { bootstrap(); },
+      'addLinkId': true
+    };
+
+   function countChar(str)
+   {
+     window.status= str.length + " characters typed";
+   }
+  </script>
+  <script src="scripts/tabber.js"></script>
+</head>
+<body>
+<div id="close"><button id="closebutton" class="controlbutton" type="button" onClick="window.close();"></button></div>
+  <div class="tabber">
+    <div class="tabbertab">
+      <h2>Motu</h2>
+      <form name="ui">
+        <table border="0" width="400px">
+        <tr>
+          <td width="10%">
+            <textarea name="tib" cols="70" name="code" rows="20" onKeyUp="countChar(this.value)"></textarea><br>
+            <textarea name="output" cols="70" name="code" rows="10"></textarea>
+          </td>
+          <td style="align: left" valign="top">
+            <input type="button" name="bEvaluate" value="Evaluate" onClick="javascript:runCode()"/><br>
+            <hr>
+            <input type="button" name="bSave" value="Save" onClick="javascript:save()"/><br>
+            <input type="button" name="bLoad" value="Load" onClick="javascript:load()"/><br>
+            <input type="button" name="bNew"  value="New"  onClick="javascript:allnew()"/><br>
+            <hr>
+            <input type="button" name="bClearDisplay" value="Clear Output" onClick="javascript:clearDisplay()"/><br>
+            <hr>
+            <input type="button" name="bLine" value="Separator" onClick="uiLine()"/><br>
+            <input type="button" name="bDate" value="Date" onClick="uiToday()"/><br>
+            <input type="button" name="bTime" value="Time" onClick="uiTime()"/>
+            <div id="wait">
+              <hr>
+              <img src="images/wait.gif">
+            </div>
+          </td>
+        </tr>
+        </table>
+      </form>
+    </div>
+    <div class="tabbertab">
+      <h2>Advanced</h2>
+      <form name="ui">
+        <table border="0" width="400px">
+        <tr>
+          <td width="10%">
+            <textarea name="stats" cols="70" name="code" rows="20"></textarea>
+          </td>
+          <td style="align: left" valign="top">
+          <input type="button" name="bUpdateStats" value="Get Image Stats" onClick="javascript:getMemUsage()"/>
+          <hr>
+          <input type="button" name="bResetRetro" value="Reset Retro" onClick="javascript:resetRetro()"/>
+          </td>
+        </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+<div style="visibility: hidden; display: none;" id="notxt" name="notxt"></div>
+<script type="text/javascript">
+  tabberAutomatic(tabberOptions);
+</script>
+</body>
+</html>

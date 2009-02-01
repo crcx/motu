@@ -1,0 +1,58 @@
+body
+{
+  width: 680px;
+}
+
+#wait
+{
+  display: block;
+  visibility: visible;
+}
+
+
+/*
+#DEB887;
+*/
+textarea, input
+{
+  border: 1px solid darkgrey;
+  font-family: monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: normal;
+  line-height: 100%;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: none;
+  text-align: left;
+  text-indent: 0ex;
+  background-color: #2A2A2A;
+  color: silver;
+  padding: 3px;
+}
+
+input:hover
+{
+  background-color: #DEB887;
+  color: black;
+}
+
+input:active
+{
+  background-color: #96753B;
+  color: white;
+}
+
+hr
+{
+  height: 1px;
+  background-color: #000000;
+  border: 0px;
+}
+
+input
+{
+  width: 10em;
+}
