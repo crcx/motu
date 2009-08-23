@@ -1,3 +1,4 @@
+var image = new Array(5000000);
 function loadImage()
 {
   var a; for (a = 0; a < 5000000; a++) image[a]=0;
