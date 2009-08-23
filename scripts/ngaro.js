@@ -52,7 +52,6 @@
 
   var startLast = 0;
   var startHeap = 0;
-  var startStr  = 0;
 
 
 /**********************************************************************
@@ -402,7 +401,6 @@ function bootstrap()
   /* Save some system state (for 'reset vm' functionality) */
   startLast = image[2];
   startHeap = image[3];
-  startStr  = image[4];
 }
 
 
@@ -416,7 +414,6 @@ function resetRetro()
   tib = '  ';
   image[2] = startLast;
   image[3] = startHeap;
-  image[4] = startStr;
   initVM();
 }
 
@@ -426,5 +423,4 @@ function getMemUsage()
 {
   document.forms[1].stats.value = 'Heap: ' + image[3] + '\n';
   document.forms[1].stats.value += 'Dictionary: ' + image[2] + '\n';
-  document.forms[1].stats.value += 'String Table: ' + image[4];
 }
